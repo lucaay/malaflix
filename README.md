@@ -1,4 +1,5 @@
-# malaflix
+# Malaflix
+
 Netflix inspired. Front end development. Fully responsive website.
 
 Copyright 2021, Luca Sergiu, All rights reserved.
