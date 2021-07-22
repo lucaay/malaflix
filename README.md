@@ -16,7 +16,9 @@ Netflix inspired. Front end development. Fully responsive website.
 
 # Features 🔥
 📺 Navbar which change its color when scroll
+
 📺 Carousel of movies adn shows
+
 📺 Hover the movie/show to see the trailer, Play, Add to List, Like, Dislike, More Info buttons, match percentage, required age, the number of seasons, video quality and genres
 
 ![image](https://user-images.githubusercontent.com/32814024/126615518-01773e3d-5d09-4f0a-970c-cf0be6bc24b8.png)
