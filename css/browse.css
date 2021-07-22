@@ -1,0 +1,2022 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans',
+        'Helvetica Neue',
+        Helvetica,
+        Arial,
+        sans-serif;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+
+html{
+    scrollbar-width: thin;
+    scrollbar-color: black;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* HEADER */
+
+#header {
+    width: 100%;
+    min-height: 70px;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.767) 100%);
+    transition: 0.25s ease-out;
+}
+
+.header-color-change{
+    position: fixed !important;
+    background: transparent !important;
+    background-color: black !important;
+    transition: 0.25s ease-out;
+}
+
+
+#header button{
+    cursor: pointer;
+    background: transparent;
+}
+
+.logo {
+    display: flex;
+    width: 100px;
+}
+.logo:hover {
+    cursor: pointer;
+}
+.hleft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 50px;
+}
+.hleft .links{
+    height: 100%;
+    margin-left: 40px;
+}
+
+.links a{
+    color: #e4e4e4;
+    margin: 0 5px;
+    font-size: 1em;
+    transition: 0.25s ease-out;
+}
+.links a:hover{
+    color: grey;
+    transition: 0.25s ease-out;
+}
+
+.hleft .active {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+.hleft .active:hover{
+    color: white;
+}
+
+
+.hright{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 50px;
+}
+.hright button{
+    display: flex;
+    text-align: center;
+}
+.search-box ,
+.notification-box{
+    margin-right: 25px;
+}
+
+.search-box ion-icon,
+.notification-box ion-icon, .menu-box ion-icon {
+    width: 25px;
+    height: 25px;
+    color: white;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.search-box form{
+    margin-right: 10px;
+}
+.search-box form .search-input-hidden {
+    display: none;
+    color: white;
+    padding-right: 40px;
+    padding-left: 10px;
+    height: 40px;
+    width: 210px;
+    background-color: #1e272e;
+    margin-right: -45px;
+    border: 1px solid #d2dae2;
+    opacity: 0;
+}
+
+.search-box form .search-input-show {
+    display: block;
+    opacity: 1;
+    transition: 0.5s ease-out;
+}
+
+
+
+
+
+.dropdown-content-notification {
+    position: absolute;
+    background-color: #000000c2;
+    overflow-y: scroll;
+    text-align: left;
+    width: 400px;
+    height: 500px;
+    right: 120px;
+    top: 60px;
+    border-top: 2px solid white;
+    border-radius: 5px;
+    scrollbar-width: thin;
+}
+.arrow{
+    bottom: -2px;
+    position: absolute;
+}
+.arrow-drp{
+    visibility: hidden;
+    transition: visibility 0.2s;
+}
+
+.card{
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid rgba(107, 107, 107, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}
+.card:hover{
+    background-color: black;
+    transition: 0.5s ease-out;
+
+}
+.card img{
+    border-radius: 10px;
+    margin: 10px;
+    min-width: 120px;
+}
+.card .card-header{
+    font-size: 1em;
+}
+.card .card-main{
+    font-size: 0.9em;
+}
+
+.card .card-footer{
+    font-size: 0.75em;
+    color: grey;
+}
+
+.show{
+    visibility: visible;
+}
+
+
+
+.dropbtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.dropbtn ion-icon{
+    margin-left: 10px;
+}
+.top-settings{
+    cursor: pointer;
+}
+
+
+.top-settings ion-icon {
+    color: white;
+}
+
+.top-settings img{
+    width: 30px;
+    height: 30px;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #000000c2;
+    text-align: left;
+    width: 200px;
+    height: 310px;
+    right: 50px;
+    top: 60px;
+    border-radius: 5px;
+    visibility: hidden;
+    transition: visibility 0.2s;
+    color: white;
+    border: 1px solid rgb(87, 87, 87);
+    font-size: 0.8em;
+}
+
+.all-profiles{
+    width: 100%;
+    margin-top: 5px;
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.profile:hover{
+    text-decoration: underline;
+}
+
+.profile img{
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+    margin: 10px 10px 5px 10px;
+}
+
+.manage a{
+    margin-left: 10px;
+}
+
+.manage{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.manage:hover{
+    text-decoration: underline;
+}
+
+.dropdown-content a{
+    color: white;
+}
+
+
+.drp-content,
+.account-part-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+.account-part-menu{
+    height: 80px;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.account-part-menu a{
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.account-part-menu .acc-a{
+    width: 100%;
+}
+.acc-a:hover{
+    text-decoration: underline;
+}
+
+
+.dropdown-content hr{
+    background-color: rgb(87, 87, 87);
+    height: 1px;
+    width: 100%;
+}
+.dropbtn ion-icon{
+    transition: 0.5s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+.links-drp {
+    display: none;
+}
+.menu-box{
+    display: none;
+}
+
+
+
+
+#main {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+/* Media querys for header*/
+@media only screen and (min-width: 980px) {
+
+    .dropbtn-notification:hover+div,
+    .arrow-drp:hover {
+        visibility: visible;
+    }
+    .dropbtn:hover+.dropdown-content,
+    .dropdown-content:hover {
+        visibility: visible;
+    }
+}
+@media only screen and (max-width: 980px) {
+    .hleft{
+        font-size: 0.75em;
+        margin-left: 20px;
+    }
+    .hleft .links{
+        margin-left: 10px;
+    }
+    .logo{
+        width: 90px;
+    }
+    .arrow-drp {
+        transition: visibility 0s;
+    }
+
+    .dropdown-content {
+        transition: visibility 0s;
+    }
+    .show{
+        visibility: visible;
+    }
+}
+@media only screen and (max-width: 880px) {
+
+    .show{
+        visibility: visible !important;
+    }
+
+    .links{
+        display: none;
+    }
+    .hleft .links-drp {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        font-size: 1.25em;
+        width: 150px;
+    }
+    .links-drp .browse-link {
+        color: white;
+        text-align: center;
+
+    }
+    .links-drp .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        margin: 0 auto;
+        font-size: 1em;
+        border-top: 1px solid white;
+        border-radius: 5px;
+        top: 30px;
+        height: 210px;
+        width: 100%;
+        background-color: #000000e1;
+        visibility: hidden;
+        transition: 0s visibility;
+    }
+
+    .links a{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0s visibility;
+    }
+    .links a:hover{
+        color: rgb(187, 187, 187);
+        background-color: #353535;
+    }
+    .links .active{
+        font-size: 1.25em;
+        margin-top: 5px;
+    }
+
+    .hright{
+        margin-right: 20px;
+    }
+
+    .dropdown-content-notification{
+        right: 90px;
+    }
+    .dropdown-content{
+        right: 20px;
+    }
+}
+@media only screen and (max-width: 620px) {
+    .search-box{
+        display: none;
+    }
+    .dropdown-content-notification {
+        width: 80%;
+        right: 10%;
+        margin: 0 auto;
+    }
+    .hleft .links-drp{
+        margin-left: -30px;
+    }
+
+
+
+}
+@media only screen and (max-width: 420px) {
+    #header{
+        background-color: black;
+        min-height: 50px;
+        position: fixed;
+        transition: all 0.25s linear;
+    }
+
+    .hleft{
+        margin-left: 0px;
+    }
+    .hleft .links-drp{
+        display: none;
+    }
+    .arrow {
+        bottom: -22px;
+        position: absolute;
+    }
+    .menu-box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 15px;
+    }
+    .menu-box button{
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu-box ion-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .dropdown-content-menu{
+        display: flex;
+        visibility: hidden;
+        transition: 0.2s visibility;
+        transform: translateX(-250px);
+        transition: 0.5s;
+        position: absolute;
+        background-color: black;
+        width: 230px;
+        left: -250px;
+        top: 50px;
+        height: 100vh;
+        z-index: 0;
+    }
+
+    .show-it{
+        visibility: visible;
+        transform: translateX(250px);
+        transition: 0.5s;
+    }
+    .dropdown-content-menu .links-3{
+        position: absolute;
+        background-color: black;
+        width: 200px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        padding: 15px;
+        padding-right: 0px;
+        font-size: 1.5em;
+    }
+    .links-3 a{
+        color: grey;
+        width: 100%;
+        padding: 10px 0px;
+    }
+    .links-3 a:hover{
+        color: white;
+    }
+    
+
+}
+
+
+
+
+
+/* MAIN */
+
+/* 
+*/
+#main{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+
+}
+.billboard{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.image-and-video{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.title-bg-1, .title-bg-2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left, transparent 20%, rgba(0, 0, 0, 0.37) 80%);
+    z-index: 1;
+}
+.title-bg-2{
+    z-index: 2;
+    background: linear-gradient(to bottom, transparent 60%,#141414 90%);
+}
+.title-image{
+    position: relative;
+    z-index:-1;
+    width: 100%;
+    opacity: 0;
+    transition: 0.25s ease-out;
+}
+
+.title-image img, .title-video video {
+    width: 100%;
+}
+
+.title-video{
+    position: absolute;
+    z-index:1;
+    width: 100%;
+    height: 120%;
+    overflow-y: hidden;
+    opacity: 0;
+    transition: 0.25s ease-out;
+}
+.title-video video{
+    position: absolute;
+    z-index:0;
+    top: -18vw;
+    width: 100%;
+    height: 120%;
+}
+
+
+.logo-description{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    color: white;
+    margin-top: 18vw;
+    margin-left: 5vw;
+    width: 40%;
+}
+
+.title-logo,
+.title-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.title-description{
+    margin-top: 1vw;
+    width: 100%;
+    opacity: 1;
+
+}
+.title-description p{
+    font-size: 1.5vw;
+}
+
+.title-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 1.5vw;
+    font-weight: 600;
+    margin-top: 2vw;
+}
+
+.play-btn, .more-info-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    border-radius: 5px;
+}
+
+
+
+.play-btn ion-icon,
+.more-info-btn ion-icon{
+    width: 2vw;
+    height: 2vw;
+    margin-right: 10px;
+}
+
+
+.play-btn{
+    width: 10vw;
+    color: black;
+    background-color: white;
+    margin-right: 0.5vw;
+}
+.play-btn:hover{
+    cursor: pointer;
+    background-color: rgb(182, 182, 182);
+    transition: 0.15s ease-out;
+}
+.play-btn a{
+    color: black;
+    margin-right: 10px;
+
+}
+.more-info-btn{
+    width: 15vw;
+    background-color: rgba(128, 128, 128, 0.575);
+    margin-left: 0.5vw;
+}
+.more-info-btn:hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.288);
+    transition: 0.15s ease-out;
+}
+.more-info-btn a{
+    color: white;
+    margin-right: 1px;
+}
+.rva-buttons{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 32vw;
+    right: 0;
+    z-index: 2;
+    color: white;
+}
+.replay-volume-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.replay-volume-buttons ion-icon {
+    width: 2vw;
+    height: 2vw;
+    right: 7vw;
+    padding: 0.5vw;
+    transition: 0.15s ease-out;
+    border: 1px solid white;
+    border-radius: 100%;
+    position: absolute;
+}
+.replay-volume-buttons ion-icon:hover{
+    color: rgba(136, 136, 136, 0.575);
+    transition: 0.15s ease-out;
+    border-color: rgba(136, 136, 136, 0.575);
+}
+
+.age-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    font-size: 1.5vw;
+    background-color: rgba(43, 43, 43, 0.637);
+    width: 5vw;
+    border-left: 0.3vw solid white;
+}
+
+.replay-volume-buttons ion-icon {
+    display: none;
+    transition: 0.1s ease-out;
+}
+#replay:hover,
+#volume-on:hover,
+#volume-off:hover{
+    cursor: pointer;
+}
+.show-btns{
+    display: flex !important;
+}
+
+.show-billboard {
+    opacity: 1;
+    transition: 0.25s ease-out;
+}
+
+.anim-ldn{
+    margin-top: 25%;
+    transition: 1.5s ease-in-out;
+}
+
+.anim-logo{
+    width: 70%;
+    transition: 1.5s ease-in-out;
+}
+
+
+.anim-d {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+
+@media only screen and (max-width: 980px){
+    .logo-description {
+        margin-top: 12vw;
+        width: 45%;
+    }
+    .anim-ldn {
+        margin-top: 25%;
+    }
+    .title-description p {
+        font-size: 2vw;
+    }
+
+    .title-buttons {
+        font-size: 2vw;
+    }
+
+    .replay-volume-buttons ion-icon {
+        width: 3vw;
+        height: 3vw;
+        right: 10vw;
+    }
+
+    .age-block {
+        font-size: 2vw;
+        width: 7vw;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 880px){
+    .logo-description {
+        margin-top: 12vw;
+    }
+    
+    .anim-ldn {
+        margin-top: 25%;
+    }
+    .play-btn {
+        width: 15vw;
+    }
+    .more-info-btn {
+        width: 20vw;
+    }
+
+    .replay-volume-buttons ion-icon {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .age-block {
+        font-size: 2vw;
+        width: 7vw;
+    }
+}
+@media only screen and (max-width: 660px){
+    .logo-description {
+        margin-top: 15vw;
+    }
+
+    .anim-ldn {
+        margin-top: 25%;
+    }
+    .play-btn {
+        width: 15vw;
+    }
+
+    .more-info-btn {
+        width: 20vw;
+    }
+    .play-btn,
+    .more-info-btn {
+        padding-top: 0.75vw;
+        padding-bottom: 0.75vw;
+        border-radius: 3px;
+    }
+
+    .replay-volume-buttons ion-icon {
+        width: 4vw;
+        height: 4vw;
+        right: 12vw;
+    }
+
+    .age-block {
+        font-size: 3vw;
+        width: 8vw;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .billboard{
+        position: relative;
+        top: 50px;
+        margin-bottom: 50px;
+    }
+    .logo-description {
+        width: 50%;
+        margin-top: 5vw;
+    }
+
+    .anim-ldn {
+        margin-top: 25%;
+    }
+
+    .title-description p {
+        font-size: 2.5vw;
+    }
+    .title-buttons {
+        font-size: 2.5vw;
+    }
+    .replay-volume-buttons ion-icon {
+        width: 6vw;
+        height: 6vw;
+        right: 15vw;
+    }
+    
+}
+
+/* SLIDER */
+
+.sliders{
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    margin-top: 40vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: visible !important;
+}
+.swiper-container-special {
+    width: 100%;
+    height: 100%;
+    overflow: visible !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    top: 40% !important;
+    color: red !important;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.swiper-container img {
+    max-width: 100%;
+    height: auto;
+    transition: 0.5s ease-out;
+    border-radius: 5px;
+    z-index: 2;
+}
+.swiper-container img:hover{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    cursor: pointer;
+}
+
+.swiper-container-special img {
+    max-width: 100%;
+    height: auto;
+    transition: 0.5s ease-out;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.swiper-container-special img:hover {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    cursor: pointer;
+}
+
+.swiper-slide  img{
+    opacity: 1;
+    transition: 0.5s ease-out;
+}
+.specialSlide{
+    overflow: hidden;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+}
+
+
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.swiper-slide video {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.malaflix-slider h2 {
+    color: white;
+    line-height: 1.25vw;
+    font-size: 1.5vw;
+    text-align: left;
+}
+
+:root {
+    --swiper-theme-color: #fff;
+}
+
+.malaflix-slider .swiper-wrapper {
+    padding: 20px 0;
+}
+.special-slider .swiper-wrapper{
+    padding: 30px 0;
+}
+
+.malaflix-slider .swiper-slide {
+    -webkit-transition: 250ms all;
+    transition: 250ms all;
+}
+
+.malaflix-slider .swiper-slide:hover,
+.swiper-slide:focus {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    z-index: 1;
+    transition: 0.15s 0.30s ease-out;
+}
+.malaflix-slider .specialSlide:hover,
+.specialSlide:focus {
+    -webkit-transform: scale(1.3) !important;
+    transform: scale(1.3) !important;
+    z-index: 1;
+    transition: 0.15s 0.30s ease-out;
+}
+
+.malaflix-slider .swiper-slide:first-child:hover {
+    margin: 0 40px;
+}
+
+.malaflix-slider .swiper-slide:last-child:hover {
+    margin: 0 -40px;
+}
+
+.swiper-container:hover{
+    z-index: 5;
+}
+
+.swiper-container-special:hover {
+    z-index: 5;
+}
+
+
+
+.video-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #0a0a0a;
+    padding: 0.5vw;
+    position: absolute;
+    z-index: 10;
+    visibility: collapse;
+    opacity: 0;
+    transition: 0.25s ease-out;
+    margin-top: -5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: calc(100% - 1vw);
+}
+.specialSlide .video-details {
+    margin-top: -70px;
+}
+
+.swiper-slide:hover .video-details {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.15s 0.30s ease-out;
+    cursor: pointer;
+}
+
+
+.video-details-buttons,
+.video-rating,
+.video-genres {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.video-rating,
+.video-genres {
+    justify-content: flex-start;
+    margin-top: 0.75vw;
+}
+
+.video-details-buttons ion-icon {
+    padding: 0.4vw;
+    color: white;
+    border-radius: 100%;
+    border: 1px solid rgb(158, 158, 158);
+    cursor: pointer;
+}
+
+.main-video-btns ion-icon:first-of-type {
+    padding: 0.4vw;
+    background-color: white;
+    color: black;
+    border-radius: 100%;
+    border: 1px solid rgb(158, 158, 158);
+}
+
+.main-video-btns ion-icon:first-of-type:hover {
+    background-color: rgb(190, 190, 190);
+    border: 1px solid rgb(190, 190, 190);
+}
+
+.video-details-buttons ion-icon:hover {
+    border-color: white;
+}
+
+.match {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 0.75vw;
+}
+
+.video-rating .age {
+    text-align: center;
+    font-size: 0.75vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    border: 1px solid rgb(158, 158, 158);
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+.seasons {
+    font-size: 0.8vw;
+}
+
+.quality {
+    text-align: center;
+    font-size: 0.75vw;
+    border: 1px solid rgb(158, 158, 158);
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    padding-left: 0.25vw;
+    padding-right: 0.25vw;
+    border-radius: 5px;
+}
+
+.video-genres ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.video-genres ul li {
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    font-size: 0.75vw;
+    list-style:disc;
+}
+.video-genres ul li:first-of-type{
+    list-style: none;
+    margin-left: 0;
+}
+
+
+
+
+@media only screen and (max-width: 1600px){
+    .malaflix-slider .swiper-slide:hover {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    .video-details-buttons ion-icon,
+    .video-details-buttons ion-icon:first-of-type {
+        padding: 0.2vw;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .video-details-buttons ion-icon,
+    .video-details-buttons ion-icon:first-of-type {
+        padding: 0.3vw;
+    }
+    .malaflix-slider .swiper-slide:hover {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    .match,
+    .video-rating .age,
+    .seasons,
+    .quality,
+    .video-genres ul li {
+        font-size: 0.9vw;
+    }
+    .video-genres ul li{
+        margin-right: 1vw;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .video-details-buttons ion-icon,
+    .video-details-buttons ion-icon:first-of-type {
+        padding: 0.3vw;
+    }
+
+    .malaflix-slider .swiper-slide:hover {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    .match,
+    .video-rating .age,
+    .seasons,
+    .quality,
+    .video-genres ul li {
+        font-size: 1vw;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+    .malaflix-slider h2 {
+        font-size: 2vw;
+    }
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .video-details-buttons ion-icon,
+    .video-details-buttons ion-icon:first-of-type {
+        padding: 0.3vw;
+    }
+
+    .malaflix-slider .swiper-slide:hover {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    .match,
+    .video-rating .age,
+    .seasons,
+    .quality,
+    .video-genres ul li {
+        font-size: 1.5vw;
+    }
+    .video-genres ul li {
+        margin-right: 1.3vw;
+    }
+    .malaflix-slider h2 {
+        font-size: 2.5vw;
+    }
+
+    .sliders {
+        margin-top: 40vw;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .video-details-buttons ion-icon,
+    .video-details-buttons ion-icon:first-of-type {
+        padding: 0.3vw;
+    }
+
+    .malaflix-slider .swiper-slide:hover {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    .match,
+    .video-rating .age,
+    .seasons,
+    .quality,
+    .video-genres ul li {
+        font-size: 1.8vw;
+    }
+    .video-genres ul li {
+        margin-right: 1.75vw;
+    }
+    .malaflix-slider h2 {
+        font-size: 3vw;
+    }
+    .sliders {
+        margin-top: 45vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .video-details-buttons ion-icon,
+    .video-details-buttons ion-icon:first-of-type {
+        padding: 0.3vw;
+    }
+
+    .malaflix-slider .swiper-slide:hover {
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+
+    .match,
+    .video-rating .age,
+    .seasons,
+    .quality,
+    .video-genres ul li {
+        font-size: 2vw;
+    }
+    .video-genres ul li {
+        margin-right: 2vw;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .video-details-buttons ion-icon,
+    .video-details-buttons ion-icon:first-of-type {
+        padding: 0.3vw;
+    }
+
+    .malaflix-slider .swiper-slide:hover {
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+
+    .match,
+    .video-rating .age,
+    .seasons,
+    .quality,
+    .video-genres ul li {
+        font-size: 2.5vw;
+    }
+    .video-genres ul li {
+        margin-right: 2.5vw;
+    }
+    .specialSlide .video-details {
+        margin-top: -50px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .video-details-buttons ion-icon,
+    .video-details-buttons ion-icon:first-of-type {
+        padding: 0.20vw;
+    }
+
+    .malaflix-slider .swiper-slide:hover {
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+
+    .match,
+    .video-rating .age,
+    .seasons,
+    .quality,
+    .video-genres ul li {
+        font-size: 2.25vw;
+    }
+    .video-genres ul li {
+        margin-right: 2.5vw;
+    }
+}
+
+
+/*MOVIE INFO */
+.movieInfo {
+    background-color: #181818;
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    overflow-y: scroll;
+    left: 50%;
+    top: 45vh;
+    width: 1000px;
+    height: 95vh;
+    margin-left: -500px;
+    /* -1/2 width */
+    margin-top: -42.5vh;
+    /* -1/2 height */
+    z-index: 100;
+    scrollbar-width: thin;
+}
+
+.moreInfoBg{
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.438);
+    z-index: 50;
+    pointer-events: none;
+}
+
+.movieInfoBtns, .movieInfoPart1, .movieInfoPart2{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.movieInfoPart1,
+.movieInfoPart2{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.movieInfo ul li{
+    list-style: none;
+}
+.movieInfo a{
+    color: white;
+}
+.movieInfo a:hover{
+    text-decoration: underline;
+}
+
+.movieInfo video{
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.movieInfo img{
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    transition: 0.5s;
+}
+.movieInfo .title-bg-2{
+    width: 100%;
+    height: 580px;
+    background: linear-gradient(to bottom, transparent 10%, #181818 90%);
+    z-index: 2;
+}
+.clo{
+    top: 3%;
+    right: 10%;
+    position: absolute;
+    z-index: 10;
+}
+.clo .closeBtn {
+    position: fixed;
+    color: grey;
+    padding: 0px !important;
+    border: none !important;;
+    width: 50px !important;
+    height: 50px !important;
+}
+.clo .closeBtn:hover{
+    cursor: pointer;
+    color: white;
+}
+.movieInfoBtns{
+    position: absolute;
+    z-index: 3;
+    width: auto;
+    height: auto;
+    top: 400px;
+    left: 0;
+}
+.movieInfoBtns .main-video-btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.movieInfoBtns .main-video-btns ion-icon{
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+}
+.movieInfoBtns .like,
+.movieInfoBtns .dislike {
+    background-color: transparent;
+}
+
+.movieInfoPart1 {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 5;
+}
+.partLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto;
+}
+.matchAgeSeasonsQuality{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+.matchAgeSeasonsQuality .age {
+    text-align: center;
+    font-size: 1vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    border: 1px solid rgb(158, 158, 158);
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+.matchAgeSeasonsQuality .age,
+.matchAgeSeasonsQuality .match,
+.matchAgeSeasonsQuality .seasons,
+.matchAgeSeasonsQuality .quality {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.movieInfoDescription{
+    font-size: 1.1rem;
+}
+
+
+.partRight{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+    margin-left: 5%;
+    font-size: 0.9em;
+}
+.cast p,
+.movieInfoGenres p{
+    color: grey;
+    margin-right: 10px;
+}
+.cast,
+.movieInfoGenres {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+.cast a, .movieInfoGenres a{
+    white-space:nowrap;
+}
+.cast a::after, .movieInfoGenres a::after{
+    content: ",";
+    padding-right: 5px;
+}
+.cast a:last-of-type::after,
+.movieInfoGenres a:last-of-type::after{
+    content: "";
+    padding-right: 0px;
+}
+
+.movieInfoPart2{
+    z-index: 5;
+}
+
+.infoHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.episode{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
+    border-bottom: 1px solid rgb(94, 94, 94);
+    padding: 20px 5%;
+    cursor: pointer;
+}
+.episode h2{
+    width: 10%;
+    padding-right: 10px;
+}
+.episode img{
+    position: relative;
+    width: 150px;
+    height: 80px;
+    border-radius: 5px;
+}
+.epRight{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.episodeInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.episodeInfo h3{
+    font-size: 1em;
+}
+.episodeDescription p{
+    color: #d2d2d2;
+}
+
+
+.altImg, .altVideo{
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    opacity: 0;
+}
+
+.episodeInfo{
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 1250px){
+    .movieInfo {
+        width: 800px;
+        margin-left: -400px;
+        /* -1/2 width */
+    }
+    .movieInfoBtns{
+        top:350px
+    }
+    .movieInfoDescription{
+        font-size: 1em;
+    }
+    .episodeDescription{
+        font-size: 0.9em;
+    }
+    .movieInfo .title-bg-2 {
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .movieInfo {
+        width: 700px;
+        margin-left: -350px;
+        /* -1/2 width */
+    }
+
+    .movieInfoBtns {
+        top: 300px
+    }
+    .movieInfo .title-bg-2 {
+        height: 400px;
+    }
+    .partRight{
+        width: 40%;
+    }
+    .partRight .cast,
+    .partRight .movieInfoGenres {
+        vertical-align:top;
+        display:inline-block;
+        width: 50px;
+    }
+    .cast a::after,
+    .movieInfoGenres a::after {
+        content: "";
+        padding-right: 5px;
+    }
+
+}
+@media only screen and (max-width: 780px) {
+    .movieInfo {
+        width: 600px;
+        margin-left: -300px;
+        /* -1/2 width */
+    }
+    
+
+    .movieInfoBtns {
+        top: 250px
+    }
+    .matchAgeSeasonsQuality .age,
+    .matchAgeSeasonsQuality .match,
+    .matchAgeSeasonsQuality .seasons,
+    .matchAgeSeasonsQuality .quality {
+        font-size: 0.9em;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    .movieInfoPart1{
+        flex-direction: column;
+    }
+
+    .movieInfo .title-bg-2 {
+        height: 350px;
+    }
+
+    .partRight {
+        width: auto;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .partRight .cast,
+    .partRight .movieInfoGenres {
+        display: flex;
+        width: 50px;
+    }
+
+    .cast a::after,
+    .movieInfoGenres a::after {
+        content: ",";
+        padding-right: 5px;
+    }
+    .episode{
+        padding: 20px 5px;
+    }
+    .episode .ep10s {
+        margin-left: -15px;
+    }
+
+}
+
+@media only screen and (max-width: 660px) {
+    .movieInfo {
+        width: 100vw;
+        margin-left: -50vw;
+        /* -1/2 width */
+        top: 50vh;
+        height: 100vh;
+        margin-top: -50vh;
+    }
+
+    .movieInfoBtns {
+        top: 250px
+    }
+
+    .matchAgeSeasonsQuality .age,
+    .matchAgeSeasonsQuality .match,
+    .matchAgeSeasonsQuality .seasons,
+    .matchAgeSeasonsQuality .quality {
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+
+    .movieInfoPart1 {
+        flex-direction: column;
+    }
+
+    .movieInfo .title-bg-2 {
+        height: 400px;
+    }
+
+    .partRight {
+        width: auto;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+
+    .cast a::after,
+    .movieInfoGenres a::after {
+        content: ",";
+        padding-right: 5px;
+    }
+
+    .episode {
+        padding: 20px 5px;
+    }
+
+    .episode .ep10s {
+        margin-left: -15px;
+    }
+
+}
+@media only screen and (max-width: 580px) {
+    .movieInfoBtns,
+    .movieInfoPart1,
+    .movieInfoPart2,
+    .movieInfoBtns {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .movieInfo .title-bg-2 {
+        height: 350px;
+    }
+    .movieInfoBtns {
+        top: 40vw;
+    }
+    .clo{
+        margin-right: 10px;
+    }
+
+    .partRight {
+        width: auto;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .episode {
+        padding: 20px 5px;
+    }
+
+    .episode .ep10s {
+        margin-left: -15px;
+    }
+
+}
+@media only screen and (max-width: 500px) {
+
+    .movieInfoBtns,
+    .movieInfoPart1,
+    .movieInfoPart2,
+    .movieInfoBtns {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .movieInfo .title-bg-2 {
+        height: 290px;
+    }
+
+    .movieInfoBtns {
+        top: 40vw;
+    }
+
+    .clo {
+        margin-right: 10px;
+    }
+
+    .partRight {
+        width: auto;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .episode {
+        padding: 20px 5px;
+        flex-direction: column;
+    }
+    .episode img{
+        width: 40vw;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .episode .ep10s {
+        margin-left: -15px;
+    }
+    .episode h2{
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 420px) {
+    .movieInfoBtns,
+    .movieInfoPart1,
+    .movieInfoPart2,
+    .movieInfoBtns {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .episode img {
+        width: 50vw;
+    }
+
+    .movieInfo .title-bg-2 {
+        height: 250px;
+    }
+
+    .clo {
+        top: 10px;
+        margin-right: 10px;
+    }
+    .clo .closeBtn{
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .movieInfoBtns .main-video-btns ion-icon{
+        width: 25px;
+        height: 25px;
+    }
+    .movieInfoGenres a{
+        white-space: normal;
+        margin-left: 25px;
+        text-align: center;
+    }
+    .movieInfoGenres a::after {
+        content: "";
+    }
+    .matchAgeSeasonsQuality .age,
+    .matchAgeSeasonsQuality .match,
+    .matchAgeSeasonsQuality .seasons,
+    .matchAgeSeasonsQuality .quality {
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .infoHeader{
+        font-size: 0.9em;
+    }
+    .epRight{
+        margin-left: 0;
+    }
+}
+
+/* FOOTER */
+.linkedin,
+.linkedin:hover,
+.linkedin:visited {
+    color: greenyellow;
+    text-decoration: underline;
+}
+
+footer {
+    color: #757575;
+    text-decoration: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer .pf1 a {
+    font-size: 1em;
+}
+
+footer a {
+    color: #757575;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: #757575;
+}
+
+.lang {
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 7px 10px;
+    text-align: center;
+}
+
+footer li {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+footer .items {
+    width: 60%;
+    margin: 0 auto;
+}
+
+footer table {
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer .pf2 {
+    font-size: 0.8em;
+}
+
+footer table td {
+    margin: 15px auto;
+    margin-right: 50px;
+}
+
+footer .tr {
+    height: 100px;
+}
+
+
+@media only screen and (max-width: 950px){
+    footer .items {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 750px) {
+    footer table td {
+        display: inline-block;
+        margin-right: 0px;
+        width: 150px;
+        margin-bottom: 5px;
+    }
+
+    footer .items {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    footer .qc {
+        width: 100%;
+    }
+
+}
