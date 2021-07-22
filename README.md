@@ -5,7 +5,9 @@ Netflix inspired. Front end development. Fully responsive website.
 # Installation
 
 Clone the repo
+
 Download the "movies" folder from here: 
+
 Place the "movies" folder in the main folder of the project( next to index.html file)
 
 How to:
