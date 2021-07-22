@@ -2,6 +2,20 @@
 
 Netflix inspired. Front end development. Fully responsive website.
 
+# Installation
+
+Clone the repo
+Download the "movies" folder from here: 
+Place the "movies" folder in the main folder of the project( next to index.html file)
+
+How to:
+
+![image](https://user-images.githubusercontent.com/32814024/126616043-b6162385-5356-409b-a845-dfe865228557.png)
+
+# NOTE: 
+The folder with videos is on google drive and not here because it is too large(~900mb).
+The website will load quickly no matter where the website is hosted(Local Host or Paid Host) because the videos are loaded only when needed(on click or hover events).
+
 # Home Page 🏠
 ![image](https://user-images.githubusercontent.com/32814024/126614281-a207da88-5239-476b-9fdd-f1c55d49c8a3.png)
 
@@ -27,20 +41,6 @@ Netflix inspired. Front end development. Fully responsive website.
 
 ![image](https://user-images.githubusercontent.com/32814024/126615592-7475c279-b08e-4f8e-aa97-4635899429af.png)
 ![image](https://user-images.githubusercontent.com/32814024/126615611-da1ca9d9-59f7-466d-bdc6-37a003b901c4.png)
-
-# Installation
-
-Clone the repo
-Download the "movies" folder from here: 
-Place the "movies" folder in the main folder of the project( next to index.html file)
-
-How to:
-
-![image](https://user-images.githubusercontent.com/32814024/126616043-b6162385-5356-409b-a845-dfe865228557.png)
-
-# NOTE: 
-The folder with videos is on google drive and not here because it is too large(~900mb).
-The website will load quickly no matter where the website is hosted(Local Host or Paid Host) because the videos are loaded only when needed(on click or hover events).
 
 # TODO 💻
 📌 Implement Back-end functionalities 
