@@ -2,6 +2,10 @@
 
 Netflix inspired. Front end development. Fully responsive website.
 
+# LIVE DEMO
+
+https://sergiu.mocanew.com/
+
 # Installation
 
 Clone the repo
