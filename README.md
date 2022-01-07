@@ -10,10 +10,6 @@ https://sergiu.mocanew.com/
 
 Clone the repo
 
-How to:
-
-![image](https://user-images.githubusercontent.com/32814024/126616043-b6162385-5356-409b-a845-dfe865228557.png)
-
 # NOTE: 
 The website will load quickly no matter where the website is hosted(Local Host or Paid Host) because the videos are loaded only when needed(on click or hover events).
 
