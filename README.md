@@ -3,7 +3,6 @@
 Netflix inspired. Front end development. Fully responsive website.
 
 # LIVE DEMO
-KNOWN ISSUE - MOVIE INFO/VIDEO BOXES NOT OVERLAPPING EACH OTHERS
 https://sergiu.mocanew.com/
 
 # Installation
