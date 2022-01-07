@@ -10,16 +10,11 @@ https://sergiu.mocanew.com/
 
 Clone the repo
 
-Download the "movies" folder from here: https://bit.ly/3kKunLK
-
-Place the "movies" folder in the main folder of the project( next to index.html file)
-
 How to:
 
 ![image](https://user-images.githubusercontent.com/32814024/126616043-b6162385-5356-409b-a845-dfe865228557.png)
 
 # NOTE: 
-The folder with videos is on google drive and not here because it is too large(~900mb).
 The website will load quickly no matter where the website is hosted(Local Host or Paid Host) because the videos are loaded only when needed(on click or hover events).
 
 # Home Page 🏠
