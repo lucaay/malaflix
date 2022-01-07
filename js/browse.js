@@ -242,8 +242,21 @@ $('.swiper-slide').hover(
         $('video', self).get(0).pause();
         $('video', self).get(0).currentTime = 0;
         $('video', self).get(0).style.opacity = "0";
+    },
+);
+
+$(".malaflix-slider").hover(
+    function(){
+        if($(this).is(":hover") == true){
+
+            $(this).css("z-index", "20");
+        }else{
+            $(this).css("z-index", "10");
+        }
     }
 );
+
+
 
 
 
