@@ -35,9 +35,8 @@ The website will load quickly no matter where the website is hosted(Local Host o
 ![image](https://user-images.githubusercontent.com/32814024/126614879-70366071-b317-4d95-9661-f3dd11a3fa59.png)
 
 # Features 🔥
-📺 Navbar which change its color when scroll
 
-📺 Carousel of movies adn shows
+📺 Carousel of movies and shows
 
 📺 Hover the movie/show to see the trailer, Play, Add to List, Like, Dislike, More Info buttons, match percentage, required age, the number of seasons, video quality and genres
 
