@@ -3,7 +3,7 @@
 Netflix inspired. Front end development. Fully responsive website.
 
 # LIVE DEMO
-https://sergiu.mocanew.com/
+DM ME FOR THE LIVE DEMO
 
 # Installation
 
