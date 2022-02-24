@@ -1301,6 +1301,7 @@ $(document).ready(function(){
     $(window).scroll(function(){
     if(this.scrollY > 5){
         $("#header").addClass("header-color-change");
+        $("#header").css("z-index", "100");
     }
     else{
         $("#header").removeClass("header-color-change");
