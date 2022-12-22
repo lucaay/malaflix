@@ -3,7 +3,7 @@
 Netflix inspired. Front end development. Fully responsive website.
 
 # LIVE DEMO
-DM ME FOR THE LIVE DEMO
+https://malaflix.vercel.app/
 
 # Installation
 
